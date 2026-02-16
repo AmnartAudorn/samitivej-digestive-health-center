@@ -1,0 +1,76 @@
+/** @format */
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ===== FULLSCREEN OFFCANVAS RIGHT ===== */
+
+.menu-full {
+	width: 100vw !important;
+	max-width: 100vw !important;
+	height: 100vh !important;
+	border-left: none !important;
+}
+
+/* override ค่า bootstrap variable */
+.offcanvas.menu-full {
+	--bs-offcanvas-width: 100vw;
+}
+
+/* ทำ body กลางจอ */
+.menu-full .offcanvas-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* เมนูใหญ่สวยแบบ fullscreen */
+.menu-full .nav-link {
+	font-size: 1.7rem;
+	padding: 14px 0;
+}
+
+.gap-md-4 {
+	gap: 0.5rem !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
