@@ -7,7 +7,6 @@ export const Navbar = () => {
 	useEffect(() => {
 		import("bootstrap/dist/js/bootstrap.bundle.min.js");
 	}, []);
-
 	return (
 		<nav className='navbar navbar-expand-md navbar-light navbar-home py-3'>
 			<div className='container'>
@@ -139,13 +138,12 @@ export const Navbar = () => {
 
 						{/* 4. ปุ่ม Book Appointment ในเมนูซ้าย */}
 						<div className='d-grid d-xl-block mt-2 mt-xl-0'>
-							<button
+							<a
+								href='/contact'
 								className='btn btn-success fw-bold px-4 py-2 rounded-1 shadow-sm'
-								data-bs-toggle='modal'
-								data-bs-target='#appointmentModal'
 							>
-								GET IN TOUCH
-							</button>
+								Contact Us
+							</a>
 						</div>
 					</div>
 				</div>

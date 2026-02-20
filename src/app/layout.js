@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import FloatingContact from "./components/FloatingContact";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -23,6 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
+			<FloatingContact />
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
 		</html>
 	);

@@ -8,6 +8,10 @@ const nextConfig = {
 		remotePatterns: [
 			{
 				protocol: "https",
+				hostname: "samitivejthonburi.com",
+			},
+			{
+				protocol: "https",
 				hostname: "cdn.prod.website-files.com",
 			},
 		],

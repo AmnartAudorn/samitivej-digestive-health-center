@@ -21,7 +21,7 @@ export const Hero = () => {
 				<div className='col-lg-6'>
 					<h1
 						className='fw-bold mb-3'
-						style={{ fontSize: "clamp(1.8rem, 4vw, 3.5rem)" }} // ⭐ ฟอนต์ responsive
+						style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)" }} // ⭐ ฟอนต์ responsive
 					>
 						Bangkok Opticare Co.,LTD
 					</h1>
@@ -33,7 +33,13 @@ export const Hero = () => {
 						Trust Bangkok Opticare Co.,LTD for expertise in the digestive system and intestinal health.
 					</p>
 
-					<button className='btn btn-success px-4 py-2 rounded-2 fw-semibold'>Read More</button>
+					<button
+						className='btn btn-success fw-bold px-4 py-2 rounded-1 shadow-sm'
+						data-bs-toggle='modal'
+						data-bs-target='#appointmentModal'
+					>
+						GET IN TOUCH
+					</button>
 				</div>
 			</div>
 		</section>

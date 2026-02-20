@@ -1,187 +1,194 @@
 /** @format */
-
 "use client";
 
-import Image from "next/image";
+import React from "react";
 
 export const Footer = () => {
+	const currentYear = new Date().getFullYear();
+
+	// กำหนดโทนสีเขียวเข้มแบบ Premium
+	const footerStyle = {
+		backgroundColor: "#0a3d2e", // สีเขียวเข้ม (Dark Emerald)
+		color: "#ffffff",
+	};
+
 	return (
-		<footer className='bg-dark text-light pt-5'>
+		<footer
+			style={footerStyle}
+			className='pt-5 pb-3'
+		>
 			<div className='container'>
-				{/* TOP LINE */}
-				<hr className='border-secondary opacity-50' />
-
-				{/* SOCIAL */}
-				<div className='text-center mb-4'>
-					<div className='d-flex justify-content-center gap-3'>
-						<a
-							href='#'
-							target='_blank'
+				<div className='row gx-lg-5'>
+					{/* 1. Brand & Description */}
+					<div className='col-lg-4 mb-4'>
+						<h4 className='fw-bold text-white mb-3'>
+							Bangkok <span style={{ color: "#4ade80" }}>Opticare</span>
+						</h4>
+						<p
+							className='opacity-75 small'
+							style={{ lineHeight: "1.8" }}
 						>
-							<Image
-								src='https://cdn.prod.website-files.com/66e0766f4abff17e8c4707e5/6816dcf5173ad8578db244f9_a12684c2871fa86c1b800c595c2ef58f_FB_Icon.webp'
-								width={36}
-								height={36}
-								alt='facebook'
-							/>
-						</a>
+							Your trusted center for comprehensive digestive and gastrointestinal care. We are dedicated to providing world-class medical technology and expert care to ensure your digestive health
+							and overall well-being.
+						</p>
+						{/* Social Icons */}
 
-						<a
-							href='#'
-							target='_blank'
-						>
-							<Image
-								src='https://cdn.prod.website-files.com/66e0766f4abff17e8c4707e5/6816dcf51e7e0d623345aa9e_3626e9d95af5735228bdfc936a199696_IG_Icon.webp'
-								width={36}
-								height={36}
-								alt='instagram'
-							/>
-						</a>
-
-						<a
-							href='#'
-							target='_blank'
-						>
-							<Image
-								src='https://cdn.prod.website-files.com/66e0766f4abff17e8c4707e5/6816dcf5e3a672f015b3cfc1_b16d0a97c1b89c0519d01ea12ac9c292_TikTok_Icon.webp'
-								width={36}
-								height={36}
-								alt='tiktok'
-							/>
-						</a>
-
-						<a
-							href='#'
-							target='_blank'
-						>
-							<Image
-								src='https://cdn.prod.website-files.com/66e0766f4abff17e8c4707e5/6816dcf52b10b43b94fd3cfa_0e229c6ec26e444d30b791157f2a62f9_Youtube_Icon.webp'
-								width={36}
-								height={36}
-								alt='youtube'
-							/>
-						</a>
-					</div>
-				</div>
-
-				{/* CONTENT GRID */}
-				<div className='row text-center text-md-start gy-4'>
-					{/* COMPANY */}
-					<div className='col-md-3'>
-						<h6 className='fw-bold text-success'>Bangkok Opticare Co., LTD</h6>
-						<p className='small text-secondary mb-1'>283/39 Homeplace Office Building</p>
-						<p className='small text-secondary mb-1'>Thong Lo 13 Alley</p>
-						<p className='small text-secondary mb-1'>Bangkok 10110</p>
-						<p className='small text-secondary'>Thailand</p>
+						<div className='d-flex gap-3 mt-4'>
+							<a
+								href='#'
+								className='text-white'
+							>
+								<i className='bi bi-facebook fs-4'></i>
+							</a>
+							<a
+								href='#'
+								className='text-white'
+							>
+								<i className='bi bi-line fs-4'></i>
+							</a>
+							<a
+								href='#'
+								className='text-white'
+							>
+								<i className='bi bi-instagram fs-4'></i>
+							</a>
+						</div>
 					</div>
 
-					{/* RESOURCES */}
-					<div className='col-md-3'>
-						<h6 className='fw-bold text-success'>Resources</h6>
+					{/* 2. Quick Links */}
+					<div className='col-6 col-md-3 col-lg-2 mb-4'>
+						<h6 className='fw-bold mb-3 pb-2 border-bottom border-secondary'>SERVICES</h6>
 						<ul className='list-unstyled small'>
-							<li>
+							<li className='mb-2'>
 								<a
 									href='#'
-									className='text-secondary text-decoration-none'
+									className='text-decoration-none text-white-50 hover-white'
 								>
-									Treatments
+									Procedures
 								</a>
 							</li>
-							<li>
+							<li className='mb-2'>
 								<a
 									href='#'
-									className='text-secondary text-decoration-none'
+									className='text-decoration-none text-white-50 hover-white'
 								>
-									Pricing
+									Packages
 								</a>
 							</li>
-							<li>
+							<li className='mb-2'>
 								<a
 									href='#'
-									className='text-secondary text-decoration-none'
+									className='text-decoration-none text-white-50 hover-white'
 								>
-									Clinics
+									Doctors
 								</a>
 							</li>
-							<li>
+							<li className='mb-2'>
 								<a
 									href='#'
-									className='text-secondary text-decoration-none'
+									className='text-decoration-none text-white-50 hover-white'
 								>
-									Payment Plans
+									Hospitals
 								</a>
 							</li>
 						</ul>
 					</div>
 
-					{/* ABOUT */}
-					<div className='col-md-3'>
-						<h6 className='fw-bold text-success'>About</h6>
+					{/* 3. Company */}
+					<div className='col-6 col-md-3 col-lg-2 mb-4'>
+						<h6 className='fw-bold mb-3 pb-2 border-bottom border-secondary'>COMPANY</h6>
 						<ul className='list-unstyled small'>
-							<li>
+							<li className='mb-2'>
 								<a
 									href='/about'
-									className='text-secondary text-decoration-none'
+									className='text-decoration-none text-white-50 hover-white'
 								>
 									About Us
 								</a>
 							</li>
-							<li>
-								<a
-									href='/contact'
-									className='text-secondary text-decoration-none'
-								>
-									Contact
-								</a>
-							</li>
-							<li>
+							<li className='mb-2'>
 								<a
 									href='#'
-									className='text-secondary text-decoration-none'
+									className='text-decoration-none text-white-50 hover-white'
+								>
+									Our Process
+								</a>
+							</li>
+							<li className='mb-2'>
+								<a
+									href='#'
+									className='text-decoration-none text-white-50 hover-white'
 								>
 									FAQ
 								</a>
 							</li>
+							<li className='mb-2'>
+								<a
+									href='#'
+									className='text-decoration-none text-white-50 hover-white'
+								>
+									Contact Us
+								</a>
+							</li>
 						</ul>
 					</div>
 
-					{/* POLICY */}
-					<div className='col-md-3'>
-						<h6 className='fw-bold text-success'>Policy</h6>
-						<ul className='list-unstyled small'>
-							<li>
-								<a
-									href='#'
-									className='text-secondary text-decoration-none'
-								>
-									Terms
-								</a>
-							</li>
-							<li>
-								<a
-									href='#'
-									className='text-secondary text-decoration-none'
-								>
-									Privacy
-								</a>
-							</li>
-							<li>
-								<a
-									href='#'
-									className='text-secondary text-decoration-none'
-								>
-									Disclaimer
-								</a>
-							</li>
-						</ul>
+					{/* 4. Contact Info */}
+					<div className='col-md-6 col-lg-4 mb-4'>
+						<div
+							className='p-4 rounded-3'
+							style={{ backgroundColor: "rgba(255,255,255,0.05)" }}
+						>
+							<h6 className='fw-bold mb-3 text-white'>CONTACT US</h6>
+							<ul className='list-unstyled small mb-0'>
+								<li className='mb-3 d-flex gap-3'>
+									<i className='bi bi-geo-alt-fill text-success'></i>
+									<span className='text-white-50'>Samitivej Chinatown Hospital, Bangkok, Thailand, 10100</span>
+								</li>
+								<li className='mb-3 d-flex gap-3'>
+									<i className='bi bi-telephone-fill text-success'></i>
+									<span className='text-white-50'>094-449-9899</span>
+								</li>
+								<li className='mb-0 d-flex gap-3'>
+									<i className='bi bi-envelope-fill text-success'></i>
+									<span className='text-white-50'>info@opticare.com</span>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
-				{/* BOTTOM */}
-				<hr className='border-secondary opacity-50 mt-4' />
+				<hr className='my-4 border-secondary opacity-25' />
 
-				<p className='text-center small text-secondary pb-4 mb-0'>© {new Date().getFullYear()} Bangkok Opticare Co., LTD — All Rights Reserved</p>
+				{/* Bottom Footer */}
+				<div className='row align-items-center opacity-75'>
+					<div className='col-md-6 text-center text-md-start'>
+						<p className='small mb-0'>© {currentYear} Bangkok Opticare Co.,LTD. All rights reserved.</p>
+					</div>
+					<div className='col-md-6 text-center text-md-end mt-2 mt-md-0'>
+						<a
+							href='#'
+							className='small text-white-50 text-decoration-none me-3'
+						>
+							Privacy Policy
+						</a>
+						<a
+							href='#'
+							className='small text-white-50 text-decoration-none'
+						>
+							Terms
+						</a>
+					</div>
+				</div>
 			</div>
+
+			{/* CSS สำหรับ Hover Effect */}
+			<style jsx>{`
+				.hover-white:hover {
+					color: #ffffff !important;
+					transition: 0.3s ease;
+				}
+			`}</style>
 		</footer>
 	);
 };
