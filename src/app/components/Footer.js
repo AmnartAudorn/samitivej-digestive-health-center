@@ -167,7 +167,7 @@ export const Footer = () => {
 					</div>
 					<div className='col-md-6 text-center text-md-end mt-2 mt-md-0'>
 						<a
-							href='#'
+							href='/privacy-policy'
 							className='small text-white-50 text-decoration-none me-3'
 						>
 							Privacy Policy

@@ -8,7 +8,7 @@ export const Navbar = () => {
 		import("bootstrap/dist/js/bootstrap.bundle.min.js");
 	}, []);
 	return (
-		<nav className='navbar navbar-expand-md navbar-light navbar-home py-3'>
+		<nav className='navbar navbar-expand-xl navbar-light bg-white'>
 			<div className='container'>
 				{/* 1. LOGO */}
 				<a
@@ -16,25 +16,28 @@ export const Navbar = () => {
 					href='#'
 				>
 					<div className='d-flex flex-column lh-1'>
-						<span className='fw-bold fs-4 text-success mb-0'>Bangkok Opticare Co.,LTD</span>
+						{/* Mobile */}
+						<span className='fw-bold text-success mb-0 d-md-none'>Digestive Health</span>
+
+						{/* Tablet / Desktop */}
+						<span className='fw-bold text-success mb-0 d-none d-md-inline'>Samitivej Digestive Health Center</span>
 					</div>
 				</a>
 
 				{/* 2. Hamburger Button - ปรับ target ไปที่ offcanvasNavbar */}
 				<button
-					className='navbar-toggler border-0 shadow-none'
+					className='navbar-toggler'
 					type='button'
 					data-bs-toggle='offcanvas'
 					data-bs-target='#offcanvasNavbar'
-					aria-controls='offcanvasNavbar'
 				>
 					<span className='navbar-toggler-icon'></span>
 				</button>
 
 				<div
-					className='offcanvas offcanvas-end fullscreen-menu'
+					className='offcanvas offcanvas-end'
+					tabIndex='-1'
 					id='offcanvasNavbar'
-					aria-labelledby='offcanvasNavbarLabel'
 				>
 					{/* Header ของเมนูตอนเปิด (แสดงบนมือถือ) */}
 					<div className='offcanvas-header border-bottom'>
@@ -42,7 +45,7 @@ export const Navbar = () => {
 							className='offcanvas-title fw-bold text-success'
 							id='offcanvasNavbarLabel'
 						>
-							Bangkok Opticare Co.,LTD
+							Digestive Health Center
 						</h5>
 						<button
 							type='button'
@@ -75,7 +78,7 @@ export const Navbar = () => {
 									<li>
 										<a
 											className='dropdown-item'
-											href='#'
+											href='/packages'
 										>
 											PACKAGES
 										</a>
@@ -86,7 +89,7 @@ export const Navbar = () => {
 							<li className='nav-item'>
 								<a
 									className='nav-link'
-									href='about'
+									href='/about'
 								>
 									ABOUT US
 								</a>
@@ -103,7 +106,7 @@ export const Navbar = () => {
 									<li>
 										<a
 											className='dropdown-item'
-											href='#'
+											href='/doctors'
 										>
 											DOCTORS
 										</a>
@@ -111,7 +114,7 @@ export const Navbar = () => {
 									<li>
 										<a
 											className='dropdown-item'
-											href='#'
+											href='/hospitals'
 										>
 											HOSPITALS
 										</a>
@@ -119,7 +122,7 @@ export const Navbar = () => {
 									<li>
 										<a
 											className='dropdown-item'
-											href='#'
+											href='/our-process'
 										>
 											OUR PROCESS
 										</a>
@@ -127,7 +130,7 @@ export const Navbar = () => {
 									<li>
 										<a
 											className='dropdown-item'
-											href='#'
+											href='/faq'
 										>
 											FAQ
 										</a>

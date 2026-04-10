@@ -9,7 +9,7 @@ export const TopBar = () => {
 				<div className='d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-2'>
 					<span className='d-flex align-items-center gap-2'>
 						<i className='bi bi-envelope'></i>
-						<span>contact@example.com</span>
+						<span>marketing1.doc@gmail.com</span>
 					</span>
 
 					<span className='d-flex align-items-center gap-2'>

@@ -19,7 +19,7 @@ export default function Home() {
 			<Navbar />
 			<AppointmentModal />
 			<Hero />
-
+			<PatientStories />
 			{/* ===== TOP CTA BANNER ===== */}
 			<section className='py-5'>
 				<div className='container'>
@@ -46,7 +46,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<PatientStories />
+
 			<TrustedPartners />
 			<Footer />
 		</main>

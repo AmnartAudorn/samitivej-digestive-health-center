@@ -51,17 +51,17 @@ export default function AboutPage() {
 							<h2
 								className='fw-semibold text-success mb-2'
 								style={{
-									fontSize: "clamp(1.7rem, 3vw, 2.6rem)",
+									fontSize: "clamp(2rem, 2vw, 1.6rem)",
 									letterSpacing: "0.5px",
 								}}
 							>
-								Bangkok Opticare
+								Samitivej Digestive Health Center
 							</h2>
 
 							<p
 								className='text-muted mb-4'
 								style={{
-									fontSize: "clamp(0.95rem, 1.2vw, 1.1rem)",
+									fontSize: "clamp(0.85rem, 0.2vw, 1.1rem)",
 									letterSpacing: "0.4px",
 								}}
 							>
@@ -71,7 +71,7 @@ export default function AboutPage() {
 							<p
 								className='text-secondary mb-3 mx-auto mx-lg-0'
 								style={{
-									fontSize: "clamp(0.98rem, 1.2vw, 1.15rem)",
+									fontSize: "clamp(0.88rem, 0.2vw, 1.15rem)",
 									lineHeight: 1.85,
 									textAlign: "justify",
 									maxWidth: "640px",
@@ -84,7 +84,7 @@ export default function AboutPage() {
 							<p
 								className='text-secondary mx-auto mx-lg-0'
 								style={{
-									fontSize: "clamp(0.98rem, 1.2vw, 1.15rem)",
+									fontSize: "clamp(0.88rem, 0.2vw, 1.15rem)",
 									lineHeight: 1.85,
 									textAlign: "justify",
 									maxWidth: "640px",

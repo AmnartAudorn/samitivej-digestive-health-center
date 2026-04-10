@@ -1,47 +1,42 @@
 /** @format */
 
 import Image from "next/image";
+import Link from "next/link";
 
 export const PatientStories = () => {
-	const stories = [
+	const treatments = [
 		{
-			title: "Susie’s Cosmetic Surgery Journey in Thailand",
-			image: "/stories/story1.jpg",
-			doctor: "Dr. Note",
-			hospital: "World Medical Hospital",
-			link: "/stories/susie",
+			title: "Colonoscopy Examination",
+			image: "/colonoscopy.jpg",
+			desc: "Screening and diagnosis of colon diseases",
+			link: "/treatments/colonoscopy",
 		},
 		{
-			title: "Elyce’s Journey, Breast Augmentation in Bangkok",
-			image: "/stories/story2.jpg",
-			doctor: "Dr. Pattaya",
-			hospital: "The ART Hospital",
-			link: "/stories/elyce",
+			title: "Intestinal Surgery",
+			image: "/surgery.jpg",
+			desc: "Treatment for severe intestinal conditions",
+			link: "/treatments/surgery",
 		},
 		{
-			title: "Elizabeth’s Transformation in Thailand",
-			image: "/stories/story3.jpg",
-			doctor: "Dr. Keerapat",
-			hospital: "ViMUT Hospital",
-			link: "/stories/elizabeth",
+			title: "Colon Cancer Surgery",
+			image: "/cancer.jpg",
+			desc: "Removal of cancerous tumors in the colon",
+			link: "/treatments/cancer",
 		},
 	];
 
 	return (
 		<section className='py-5 bg-light'>
 			<div className='container'>
-				{/* TITLE */}
-				<h2 className='text-center fw-semibold text-success mb-5'>Our Latest Patient Stories</h2>
+				<h2 className='text-center fw-semibold text-success mb-5'>Intestinal Treatment Information</h2>
 
-				{/* CARDS */}
 				<div className='row g-4'>
-					{stories.map((item, index) => (
+					{treatments.map((item, index) => (
 						<div
 							key={index}
 							className='col-lg-4 col-md-6'
 						>
 							<div className='card border-0 shadow-sm h-100'>
-								{/* IMAGE */}
 								<div
 									className='position-relative'
 									style={{ height: "260px" }}
@@ -54,20 +49,17 @@ export const PatientStories = () => {
 									/>
 								</div>
 
-								{/* CONTENT */}
 								<div className='card-body d-flex flex-column'>
-									<h5 className='fw-semibold text-success mb-3'>{item.title}</h5>
+									<h5 className='fw-semibold text-success mb-2'>{item.title}</h5>
 
-									<p className='text-muted mb-4'>
-										{item.doctor}, {item.hospital}
-									</p>
+									<p className='text-muted mb-4'>{item.desc}</p>
 
-									<a
+									<Link
 										href={item.link}
 										className='btn btn-outline-success mt-auto'
 									>
-										Read Story →
-									</a>
+										View Details →
+									</Link>
 								</div>
 							</div>
 						</div>

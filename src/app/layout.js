@@ -24,8 +24,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<FloatingContact />
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+			<body>
+				{children}
+				<FloatingContact />
+			</body>
 		</html>
 	);
 }
