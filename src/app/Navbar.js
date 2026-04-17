@@ -1,6 +1,6 @@
 /** @format */
 "use client";
-
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 export const Navbar = () => {
@@ -8,7 +8,7 @@ export const Navbar = () => {
 		import("bootstrap/dist/js/bootstrap.bundle.min.js");
 	}, []);
 	return (
-		<nav className='navbar navbar-expand-xl navbar-light bg-white'>
+		<nav className='navbar navbar-expand-xl navbar-light bg-white shadow-sm py-3'>
 			<div className='container'>
 				{/* 1. LOGO */}
 				<a
@@ -64,6 +64,14 @@ export const Navbar = () => {
 									href='/'
 								>
 									HOME
+								</a>
+							</li>
+							<li className='nav-item'>
+								<a
+									className='nav-link'
+									href='/news'
+								>
+									NEWS
 								</a>
 							</li>
 							<li className='nav-item dropdown'>

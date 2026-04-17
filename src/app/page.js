@@ -11,6 +11,8 @@ import { AppointmentModal } from "./components/AppointmentModal";
 import { PatientStories } from "./components/PatientStories";
 import { TrustedPartners } from "./components/TrustedPartners";
 import { Footer } from "./components/Footer";
+import Link from "next/link";
+import { articles } from "./news/data";
 
 export default function Home() {
 	return (
@@ -20,6 +22,53 @@ export default function Home() {
 			<AppointmentModal />
 			<Hero />
 			<PatientStories />
+			{/* ===== LATEST ARTICLES ===== */}
+			<section className='py-5 bg-light'>
+				<div className='container'>
+					<div className='d-flex justify-content-between align-items-center mb-4'>
+						<h3 className='fw-bold mb-0'>Latest Articles</h3>
+
+						<Link
+							href='/news'
+							className='text-success fw-semibold'
+						>
+							View All →
+						</Link>
+					</div>
+
+					<div className='row g-4'>
+						{articles.slice(0, 3).map((item) => (
+							<div
+								className='col-md-4'
+								key={item.slug}
+							>
+								<Link
+									href={`/news/${item.slug}`}
+									className='text-decoration-none'
+								>
+									<div className='card border-0 shadow-sm rounded-4 h-100 overflow-hidden'>
+										<Image
+											src={item.image}
+											alt={item.title}
+											width={400}
+											height={250}
+											className='w-100 object-fit-cover'
+										/>
+
+										<div className='card-body'>
+											<span className='badge bg-success mb-2'>{item.category}</span>
+
+											<h6 className='fw-semibold text-dark'>{item.title}</h6>
+
+											<p className='text-muted small mb-0'>{item.date}</p>
+										</div>
+									</div>
+								</Link>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
 			{/* ===== TOP CTA BANNER ===== */}
 			<section className='py-5'>
 				<div className='container'>
