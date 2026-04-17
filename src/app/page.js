@@ -26,7 +26,7 @@ export default function Home() {
 			<section className='py-5 bg-light'>
 				<div className='container'>
 					<div className='d-flex justify-content-between align-items-center mb-4'>
-						<h3 className='fw-bold mb-0'>Latest Articles</h3>
+						<h2 className='text-center fw-semibold text-success mb-5'>Latest Articles</h2>
 
 						<Link
 							href='/news'

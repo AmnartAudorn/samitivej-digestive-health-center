@@ -69,7 +69,30 @@ export default async function NewsDetailPage({ params }) {
 								color: "#333",
 							}}
 						>
-							{article.content}
+							{article.content.split("\n").map((line, i) => {
+								const text = line.trim();
+
+								// 👉 detect list
+								if (/^\d+\./.test(text)) {
+									return (
+										<li
+											key={i}
+											className='mb-2'
+										>
+											{text.replace(/^\d+\.\s*/, "")}
+										</li>
+									);
+								}
+
+								return text ? (
+									<p
+										key={i}
+										className='mb-3'
+									>
+										{text}
+									</p>
+								) : null;
+							})}
 						</article>
 					</div>
 

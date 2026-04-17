@@ -45,14 +45,14 @@ export default function OurProcess() {
 			<TopBar />
 			<Navbar />
 
-			<section className='hero-section position-relative text-white'>
+			<section className='hero-section d-flex align-items-center justify-content-center text-white position-relative'>
 				{/* Overlay */}
 				<div
 					className='position-absolute w-100 h-100 bg-dark'
 					style={{ opacity: 0.35 }}
-				></div>
+				/>
 
-				<div className='position-absolute top-50 start-50 translate-middle text-center w-100 px-3'>
+				<div className='text-center position-relative px-3'>
 					<h1 className='hero-title fw-bold mb-3'>Our Process</h1>
 					<p className='hero-sub mb-0'>A Seamless Journey to Better Digestive Health.</p>
 				</div>
